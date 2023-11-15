@@ -1,0 +1,64 @@
+
+
+*, *::before, *after {
+    box-sizing: border-box;
+}
+body {
+    margin: 20px;
+}
+.carousel {
+    width: 100vw;
+    height: 100vw;
+    position: relative;
+    text-align: center;
+}
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    
+}
+.slide[data-active]{
+    opacity: 1;
+}
+.slide > img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    object-position: center;
+}
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 20%;
+    z-index: 2;
+    transform: translate(-50%);
+    color: rgb(231, 222, 222);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: transparent;
+}
+.carousel > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.carousel-button:hover
+.carousel-button:focus {
+    color: blanchedalmond;
+    background-color: rgb(32, 37, 36);
+
+}
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+.carousel-button.prev {
+    left: 1rem;
+}
+.carousel-button.next{
+    right: 1rem;
+}
